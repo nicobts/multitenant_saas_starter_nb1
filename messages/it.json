@@ -1,0 +1,73 @@
+{
+  "common": {
+    "welcome": "Benvenuto",
+    "logout": "Esci",
+    "login": "Accedi",
+    "signup": "Registrati",
+    "email": "Email",
+    "password": "Password",
+    "name": "Nome",
+    "save": "Salva",
+    "cancel": "Annulla",
+    "delete": "Elimina",
+    "edit": "Modifica",
+    "create": "Crea",
+    "search": "Cerca",
+    "loading": "Caricamento...",
+    "error": "Errore",
+    "success": "Successo"
+  },
+  "nav": {
+    "dashboard": "Dashboard",
+    "projects": "Progetti",
+    "settings": "Impostazioni",
+    "team": "Team",
+    "billing": "Fatturazione"
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "description": "Gestisci il tuo spazio di lavoro e i progetti"
+  },
+  "projects": {
+    "title": "Progetti",
+    "description": "Visualizza e gestisci i tuoi progetti",
+    "create": "Crea Progetto",
+    "noProjects": "Nessun progetto ancora",
+    "createFirst": "Crea il tuo primo progetto per iniziare"
+  },
+  "team": {
+    "title": "Membri del Team",
+    "description": "Gestisci i membri del team e gli inviti",
+    "invite": "Invita Membro",
+    "role": "Ruolo",
+    "owner": "Proprietario",
+    "admin": "Amministratore",
+    "member": "Membro"
+  },
+  "billing": {
+    "title": "Fatturazione",
+    "description": "Gestisci il tuo abbonamento e la fatturazione",
+    "plan": "Piano",
+    "free": "Gratuito",
+    "starter": "Starter",
+    "pro": "Pro",
+    "enterprise": "Enterprise",
+    "upgrade": "Aggiorna Piano",
+    "manageSubscription": "Gestisci Abbonamento"
+  },
+  "auth": {
+    "signIn": "Accedi al tuo account",
+    "signUp": "Crea un nuovo account",
+    "forgotPassword": "Password dimenticata?",
+    "resetPassword": "Reimposta password",
+    "verifyEmail": "Verifica la tua email",
+    "emailSent": "Controlla la tua email",
+    "emailNotVerified": "Per favore verifica il tuo indirizzo email"
+  },
+  "errors": {
+    "unauthorized": "Non sei autorizzato a eseguire questa azione",
+    "notFound": "La risorsa richiesta non è stata trovata",
+    "serverError": "Si è verificato un errore imprevisto",
+    "validationError": "Controlla i tuoi dati e riprova"
+  }
+}

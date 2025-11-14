@@ -1,0 +1,73 @@
+{
+  "common": {
+    "welcome": "Willkommen",
+    "logout": "Abmelden",
+    "login": "Anmelden",
+    "signup": "Registrieren",
+    "email": "E-Mail",
+    "password": "Passwort",
+    "name": "Name",
+    "save": "Speichern",
+    "cancel": "Abbrechen",
+    "delete": "Löschen",
+    "edit": "Bearbeiten",
+    "create": "Erstellen",
+    "search": "Suchen",
+    "loading": "Laden...",
+    "error": "Fehler",
+    "success": "Erfolg"
+  },
+  "nav": {
+    "dashboard": "Dashboard",
+    "projects": "Projekte",
+    "settings": "Einstellungen",
+    "team": "Team",
+    "billing": "Abrechnung"
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "description": "Verwalten Sie Ihren Arbeitsbereich und Projekte"
+  },
+  "projects": {
+    "title": "Projekte",
+    "description": "Sehen und verwalten Sie Ihre Projekte",
+    "create": "Projekt Erstellen",
+    "noProjects": "Noch keine Projekte",
+    "createFirst": "Erstellen Sie Ihr erstes Projekt, um zu beginnen"
+  },
+  "team": {
+    "title": "Teammitglieder",
+    "description": "Verwalten Sie Ihre Teammitglieder und Einladungen",
+    "invite": "Mitglied Einladen",
+    "role": "Rolle",
+    "owner": "Eigentümer",
+    "admin": "Administrator",
+    "member": "Mitglied"
+  },
+  "billing": {
+    "title": "Abrechnung",
+    "description": "Verwalten Sie Ihr Abonnement und die Abrechnung",
+    "plan": "Plan",
+    "free": "Kostenlos",
+    "starter": "Starter",
+    "pro": "Pro",
+    "enterprise": "Enterprise",
+    "upgrade": "Plan Upgraden",
+    "manageSubscription": "Abonnement Verwalten"
+  },
+  "auth": {
+    "signIn": "Melden Sie sich bei Ihrem Konto an",
+    "signUp": "Erstellen Sie ein neues Konto",
+    "forgotPassword": "Passwort vergessen?",
+    "resetPassword": "Passwort zurücksetzen",
+    "verifyEmail": "Bestätigen Sie Ihre E-Mail",
+    "emailSent": "Überprüfen Sie Ihre E-Mail",
+    "emailNotVerified": "Bitte bestätigen Sie Ihre E-Mail-Adresse"
+  },
+  "errors": {
+    "unauthorized": "Sie sind nicht berechtigt, diese Aktion auszuführen",
+    "notFound": "Die angeforderte Ressource wurde nicht gefunden",
+    "serverError": "Ein unerwarteter Fehler ist aufgetreten",
+    "validationError": "Bitte überprüfen Sie Ihre Eingabe und versuchen Sie es erneut"
+  }
+}

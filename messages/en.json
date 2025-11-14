@@ -1,0 +1,73 @@
+{
+  "common": {
+    "welcome": "Welcome",
+    "logout": "Logout",
+    "login": "Login",
+    "signup": "Sign up",
+    "email": "Email",
+    "password": "Password",
+    "name": "Name",
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "create": "Create",
+    "search": "Search",
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success"
+  },
+  "nav": {
+    "dashboard": "Dashboard",
+    "projects": "Projects",
+    "settings": "Settings",
+    "team": "Team",
+    "billing": "Billing"
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "description": "Manage your workspace and projects"
+  },
+  "projects": {
+    "title": "Projects",
+    "description": "View and manage your projects",
+    "create": "Create Project",
+    "noProjects": "No projects yet",
+    "createFirst": "Create your first project to get started"
+  },
+  "team": {
+    "title": "Team Members",
+    "description": "Manage your team members and invitations",
+    "invite": "Invite Member",
+    "role": "Role",
+    "owner": "Owner",
+    "admin": "Admin",
+    "member": "Member"
+  },
+  "billing": {
+    "title": "Billing",
+    "description": "Manage your subscription and billing",
+    "plan": "Plan",
+    "free": "Free",
+    "starter": "Starter",
+    "pro": "Pro",
+    "enterprise": "Enterprise",
+    "upgrade": "Upgrade Plan",
+    "manageSubscription": "Manage Subscription"
+  },
+  "auth": {
+    "signIn": "Sign in to your account",
+    "signUp": "Create a new account",
+    "forgotPassword": "Forgot password?",
+    "resetPassword": "Reset password",
+    "verifyEmail": "Verify your email",
+    "emailSent": "Check your email",
+    "emailNotVerified": "Please verify your email address"
+  },
+  "errors": {
+    "unauthorized": "You are not authorized to perform this action",
+    "notFound": "The requested resource was not found",
+    "serverError": "An unexpected error occurred",
+    "validationError": "Please check your input and try again"
+  }
+}

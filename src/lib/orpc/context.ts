@@ -1,0 +1,23 @@
+import { auth } from "@/lib/auth";
+import { getTenant } from "@/lib/tenant/get-tenant";
+import { db } from "@/db";
+import type { User } from "@/db/schema";
+
+export async function createContext() {
+  // Get the session
+  const session = await auth.api.getSession({
+    headers: new Headers(),
+  });
+
+  // Get the tenant
+  const tenant = await getTenant();
+
+  return {
+    db,
+    user: session?.user as User | null,
+    session,
+    tenant,
+  };
+}
+
+export type Context = Awaited<ReturnType<typeof createContext>>;
