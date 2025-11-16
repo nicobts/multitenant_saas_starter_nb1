@@ -7,6 +7,7 @@ export * from "./invitations";
 export * from "./notifications";
 export * from "./admin";
 export * from "./ai";
+export * from "./billing";
 
 // Re-export relations
 import { usersRelations } from "./users";
@@ -21,6 +22,13 @@ import {
   aiUsageStatsRelations,
   aiPromptTemplatesRelations
 } from "./ai";
+import {
+  aiCreditPackagesRelations,
+  aiCreditsRelations,
+  aiCreditTransactionsRelations,
+  stripeCustomersRelations,
+  stripeSubscriptionsRelations
+} from "./billing";
 
 export const relations = {
   usersRelations,
@@ -36,4 +44,9 @@ export const relations = {
   aiMessagesRelations,
   aiUsageStatsRelations,
   aiPromptTemplatesRelations,
+  aiCreditPackagesRelations,
+  aiCreditsRelations,
+  aiCreditTransactionsRelations,
+  stripeCustomersRelations,
+  stripeSubscriptionsRelations,
 };
