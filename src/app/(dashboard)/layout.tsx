@@ -1,6 +1,7 @@
 import { requireTenant } from "@/lib/tenant/get-tenant";
 import { redirect } from "next/navigation";
 import { LanguageSwitcher } from "@/components/language-switcher";
+import { NotificationCenter } from "@/components/notification-center";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
 
@@ -35,6 +36,7 @@ export default async function DashboardLayout({
               <Link href="/dashboard/settings" className="hover:underline">
                 {t("settings")}
               </Link>
+              <NotificationCenter />
               <LanguageSwitcher />
             </nav>
           </div>
