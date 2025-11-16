@@ -10,7 +10,7 @@ A production-ready, state-of-the-art multitenant SaaS starter template built wit
 - **Backend**: PostgreSQL, Drizzle ORM
 - **API**: oRPC (type-safe RPC)
 - **Authentication**: Better Auth
-- **Internationalization**: next-intl (EN, IT, DE)
+- **Internationalization**: next-intl (EN, IT, DE, ES)
 
 ### Production Features
 - ✅ **Multitenancy**: Built-in support for subdomain and custom domain routing
@@ -218,12 +218,40 @@ Built with React Email for easy customization.
 
 ## Internationalization
 
-Supported languages:
-- English (default)
-- Italian
-- German
+The template comes with full internationalization support using **next-intl**.
 
-Add translations in `messages/{locale}.json`
+### Supported Languages
+- 🇬🇧 **English** (Primary)
+- 🇮🇹 **Italian** (Italiano)
+- 🇩🇪 **German** (Deutsch)
+- 🇪🇸 **Spanish** (Español)
+
+### Usage
+
+```tsx
+import { useTranslations } from "next-intl";
+
+export function MyComponent() {
+  const t = useTranslations("common");
+  return <button>{t("save")}</button>;
+}
+```
+
+### Language Switcher
+
+A language switcher component is included in the dashboard:
+
+```tsx
+import { LanguageSwitcher } from "@/components/language-switcher";
+```
+
+### Adding New Languages
+
+1. Create translation file: `messages/fr.json`
+2. Update `src/i18n/config.ts` with new locale
+3. The language will appear automatically in the switcher
+
+See **[INTERNATIONALIZATION.md](./INTERNATIONALIZATION.md)** for complete documentation.
 
 ## Code Quality
 
