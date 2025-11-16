@@ -1,10 +1,9 @@
-import { or } from "@orpc/server";
 import { z } from "zod";
 import { protectedProcedure } from "../init";
-import { eq, and, desc, isNull, sql } from "drizzle-orm";
+import { eq, and, desc, sql } from "drizzle-orm";
 import { notifications, notificationPreferences, insertNotificationSchema } from "@/db/schema";
 
-export const notificationsRouter = or({
+export const notificationsRouter = {
   // Get user's notifications
   list: protectedProcedure
     .input(
@@ -192,4 +191,4 @@ export const notificationsRouter = or({
 
       return notification;
     }),
-});
+};

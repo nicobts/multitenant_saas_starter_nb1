@@ -31,7 +31,7 @@ const superAdminProcedure = protectedProcedure.use(async (input, context, meta) 
   return { adminRole };
 });
 
-export const adminRouter = or({
+export const adminRouter = {
   // ===== TENANT MANAGEMENT =====
 
   // List all tenants with stats
@@ -487,4 +487,4 @@ export const adminRouter = or({
 
     return admins;
   }),
-});
+};

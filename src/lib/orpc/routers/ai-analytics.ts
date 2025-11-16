@@ -32,7 +32,7 @@ const superAdminProcedure = protectedProcedure.use(async (input, context, meta) 
   return { adminRole };
 });
 
-export const aiAnalyticsRouter = or({
+export const aiAnalyticsRouter = {
   /**
    * Get platform overview stats
    */
@@ -345,4 +345,4 @@ export const aiAnalyticsRouter = or({
       avgTokensPerMessage: avgTokensPerMessage || 0,
     };
   }),
-});
+};

@@ -15,7 +15,7 @@ import {
  *
  * Manages AI credits, packages, transactions, and Stripe integration
  */
-export const billingRouter = or({
+export const billingRouter = {
   // ============================================
   // CREDITS
   // ============================================
@@ -27,7 +27,7 @@ export const billingRouter = or({
     getBalance: tenantProcedure.handler(async ({ context }) => {
       const { db, tenant } = context;
 
-      let credit = await db.query.aiCredits.findFirst({
+      const credit = await db.query.aiCredits.findFirst({
         where: eq(aiCredits.tenantId, tenant.id),
       });
 
@@ -115,7 +115,7 @@ export const billingRouter = or({
         const { db, tenant, user } = context;
 
         // Get current balance
-        let credit = await db.query.aiCredits.findFirst({
+        const credit = await db.query.aiCredits.findFirst({
           where: eq(aiCredits.tenantId, tenant.id),
         });
 
@@ -335,4 +335,4 @@ export const billingRouter = or({
         };
       }),
   }),
-});
+};

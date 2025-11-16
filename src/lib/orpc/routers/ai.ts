@@ -23,7 +23,7 @@ import {
  *
  * Provides endpoints for AI conversations, messages, models, templates, and usage tracking
  */
-export const aiRouter = or({
+export const aiRouter = {
   // ============================================
   // CONVERSATIONS
   // ============================================
@@ -860,7 +860,7 @@ export const aiRouter = or({
 
         const now = new Date();
         let startDate = input.startDate;
-        let endDate = input.endDate || now;
+        const endDate = input.endDate || now;
 
         if (!startDate) {
           if (input.period === "daily") {
@@ -941,4 +941,4 @@ export const aiRouter = or({
         };
       }),
   }),
-});
+};

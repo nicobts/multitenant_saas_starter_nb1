@@ -1,4 +1,3 @@
-import { or } from "@orpc/server";
 import { projectsRouter } from "./routers/projects";
 import { tenantsRouter } from "./routers/tenants";
 import { notificationsRouter } from "./routers/notifications";
@@ -7,7 +6,8 @@ import { aiRouter } from "./routers/ai";
 import { billingRouter } from "./routers/billing";
 import { aiAnalyticsRouter } from "./routers/ai-analytics";
 
-export const appRouter = or({
+// In oRPC 1.x, routers are plain objects (no wrapper needed)
+export const appRouter = {
   projects: projectsRouter,
   tenants: tenantsRouter,
   notifications: notificationsRouter,
@@ -15,6 +15,6 @@ export const appRouter = or({
   ai: aiRouter,
   billing: billingRouter,
   aiAnalytics: aiAnalyticsRouter,
-});
+};
 
 export type AppRouter = typeof appRouter;

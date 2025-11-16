@@ -11,4 +11,10 @@ export {
   type OpenRouterGenerationInfo,
 } from "./client";
 
-export { calculateCost, trackUsage, type UsageMetrics } from "./utils";
+export {
+  calculateCost,
+  trackUsage,
+  checkQuota,
+  getUsageSummary,
+  type UsageMetrics,
+} from "./utils";

@@ -1,10 +1,9 @@
-import { or } from "@orpc/server";
 import { z } from "zod";
 import { protectedProcedure, adminProcedure } from "../init";
 import { eq, and } from "drizzle-orm";
 import { tenants, tenantMembers } from "@/db/schema";
 
-export const tenantsRouter = or({
+export const tenantsRouter = {
   // List all tenants the user has access to
   list: protectedProcedure.handler(async ({ context }) => {
     const { db, user } = context;
@@ -126,4 +125,4 @@ export const tenantsRouter = or({
 
       return { success: true };
     }),
-});
+};

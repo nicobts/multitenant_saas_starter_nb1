@@ -1,10 +1,9 @@
-import { or } from "@orpc/server";
 import { z } from "zod";
 import { tenantProcedure } from "../init";
 import { eq, and } from "drizzle-orm";
 import { projects, insertProjectSchema } from "@/db/schema";
 
-export const projectsRouter = or({
+export const projectsRouter = {
   list: tenantProcedure
     .input(
       z.object({
@@ -145,4 +144,4 @@ export const projectsRouter = or({
 
       return { success: true };
     }),
-});
+};

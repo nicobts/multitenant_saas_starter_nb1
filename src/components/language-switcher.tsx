@@ -18,7 +18,7 @@ import { locales, localeNames, localeFlags, type Locale } from "@/i18n/config";
 export function LanguageSwitcher() {
   const locale = useLocale() as Locale;
   const router = useRouter();
-  const pathname = usePathname();
+  const _pathname = usePathname();
 
   const switchLocale = (newLocale: Locale) => {
     // Set cookie for locale persistence

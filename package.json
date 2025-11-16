@@ -26,6 +26,7 @@
     "@orpc/client": "^1.11.2",
     "@orpc/next": "^0.27.0",
     "@orpc/react": "^1.11.2",
+    "@orpc/react-query": "^1.11.2",
     "@orpc/server": "^1.11.2",
     "@radix-ui/react-accordion": "^1.2.2",
     "@radix-ui/react-alert-dialog": "^1.1.4",

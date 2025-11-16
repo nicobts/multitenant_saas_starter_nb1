@@ -1,10 +1,19 @@
-import { createORPCHandler } from "@orpc/next";
+import { RPCHandler } from "@orpc/server/fetch";
 import { appRouter } from "@/lib/orpc";
 import { createContext } from "@/lib/orpc/context";
 
-const handler = createORPCHandler({
+const handler = new RPCHandler({
   router: appRouter,
-  createContext,
 });
 
-export { handler as GET, handler as POST };
+async function handleRequest(request: Request) {
+  const context = await createContext(request);
+
+  return await handler.handle({
+    request,
+    prefix: "/api",
+    context,
+  });
+}
+
+export { handleRequest as GET, handleRequest as POST };

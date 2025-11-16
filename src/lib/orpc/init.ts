@@ -9,7 +9,7 @@ export const publicProcedure = os.context<Context>();
 /**
  * Protected procedure - requires authentication
  */
-export const protectedProcedure = publicProcedure.use((input, context, meta) => {
+export const protectedProcedure = publicProcedure.use(({ context, next }) => {
   if (!context.user) {
     throw new ORPCError({
       code: "UNAUTHORIZED",
@@ -17,13 +17,13 @@ export const protectedProcedure = publicProcedure.use((input, context, meta) => 
     });
   }
 
-  return { user: context.user };
+  return next({ context: { user: context.user } });
 });
 
 /**
  * Tenant procedure - requires both authentication and tenant context
  */
-export const tenantProcedure = protectedProcedure.use((input, context, meta) => {
+export const tenantProcedure = protectedProcedure.use(({ context, next }) => {
   if (!context.tenant) {
     throw new ORPCError({
       code: "FORBIDDEN",
@@ -31,13 +31,13 @@ export const tenantProcedure = protectedProcedure.use((input, context, meta) => 
     });
   }
 
-  return { tenant: context.tenant };
+  return next({ context: { tenant: context.tenant } });
 });
 
 /**
  * Admin procedure - requires tenant admin or owner role
  */
-export const adminProcedure = tenantProcedure.use(async (input, context, meta) => {
+export const adminProcedure = tenantProcedure.use(async ({ context, next }) => {
   const { user, tenant, db } = context;
 
   // Check if user is admin or owner
@@ -53,5 +53,5 @@ export const adminProcedure = tenantProcedure.use(async (input, context, meta) =
     });
   }
 
-  return { membership };
+  return next({ context: { membership } });
 });

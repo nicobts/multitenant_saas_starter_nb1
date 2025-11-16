@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { orpcClient } from "@/lib/orpc/react";
+import { orpcClient } from "@/lib/orpc/client";
 import {
   MetricCard,
   RevenueChart,

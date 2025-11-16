@@ -26,7 +26,7 @@ export function WelcomeEmail({ name, tenantName, loginUrl }: WelcomeEmailProps) 
           <Heading style={h1}>Welcome to {tenantName}!</Heading>
           <Text style={text}>Hi {name},</Text>
           <Text style={text}>
-            We're excited to have you on board. Your account has been successfully created.
+            We&apos;re excited to have you on board. Your account has been successfully created.
           </Text>
           <Section style={buttonContainer}>
             <Button style={button} href={loginUrl}>
