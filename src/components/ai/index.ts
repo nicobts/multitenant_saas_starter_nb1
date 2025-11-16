@@ -6,6 +6,10 @@ export { MessageList } from "./message-list";
 export { ModelSelector } from "./model-selector";
 export { QuotaMeter } from "./quota-meter";
 export { UsageStats } from "./usage-stats";
+export { TemplateLibrary } from "./template-library";
+export { TemplateForm } from "./template-form";
+export { ImageUpload } from "./image-upload";
+export { ExportConversation } from "./export-conversation";
 
 export type { ChatInterfaceProps } from "./chat-interface";
 export type { ChatMessageProps } from "./chat-message";
@@ -15,3 +19,7 @@ export type { MessageListProps } from "./message-list";
 export type { ModelSelectorProps } from "./model-selector";
 export type { QuotaMeterProps } from "./quota-meter";
 export type { UsageStatsProps } from "./usage-stats";
+export type { TemplateLibraryProps } from "./template-library";
+export type { TemplateFormProps } from "./template-form";
+export type { ImageUploadProps } from "./image-upload";
+export type { ExportConversationProps } from "./export-conversation";
