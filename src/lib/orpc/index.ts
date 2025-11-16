@@ -5,6 +5,7 @@ import { notificationsRouter } from "./routers/notifications";
 import { adminRouter } from "./routers/admin";
 import { aiRouter } from "./routers/ai";
 import { billingRouter } from "./routers/billing";
+import { aiAnalyticsRouter } from "./routers/ai-analytics";
 
 export const appRouter = or({
   projects: projectsRouter,
@@ -13,6 +14,7 @@ export const appRouter = or({
   admin: adminRouter,
   ai: aiRouter,
   billing: billingRouter,
+  aiAnalytics: aiAnalyticsRouter,
 });
 
 export type AppRouter = typeof appRouter;
