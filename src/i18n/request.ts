@@ -1,13 +1,27 @@
 import { getRequestConfig } from "next-intl/server";
-import { headers } from "next/headers";
+import { headers, cookies } from "next/headers";
+import { defaultLocale, isValidLocale } from "./config";
 
 export default getRequestConfig(async () => {
-  // Get locale from headers or default to 'en'
   const headersList = await headers();
-  const locale = headersList.get("x-locale") || "en";
+  const cookieStore = await cookies();
+
+  // Priority: cookie > header > browser > default
+  let locale =
+    cookieStore.get("NEXT_LOCALE")?.value ||
+    headersList.get("x-locale") ||
+    headersList.get("accept-language")?.split(",")[0]?.split("-")[0] ||
+    defaultLocale;
+
+  // Validate and fallback to default
+  if (!isValidLocale(locale)) {
+    locale = defaultLocale;
+  }
 
   return {
     locale,
     messages: (await import(`../../messages/${locale}.json`)).default,
+    timeZone: "UTC",
+    now: new Date(),
   };
 });

@@ -1,5 +1,9 @@
 import { requireTenant } from "@/lib/tenant/get-tenant";
 import { redirect } from "next/navigation";
+import { LanguageSwitcher } from "@/components/language-switcher";
+import { NotificationCenter } from "@/components/notification-center";
+import { useTranslations } from "next-intl";
+import Link from "next/link";
 
 export default async function DashboardLayout({
   children,
@@ -7,6 +11,7 @@ export default async function DashboardLayout({
   children: React.ReactNode;
 }) {
   const tenant = await requireTenant();
+  const t = useTranslations("nav");
 
   if (!tenant) {
     redirect("/login");
@@ -18,19 +23,21 @@ export default async function DashboardLayout({
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <h1 className="text-2xl font-bold">{tenant.name}</h1>
-            <nav className="flex gap-4">
-              <a href="/dashboard" className="hover:underline">
-                Dashboard
-              </a>
-              <a href="/dashboard/projects" className="hover:underline">
-                Projects
-              </a>
-              <a href="/dashboard/team" className="hover:underline">
-                Team
-              </a>
-              <a href="/dashboard/settings" className="hover:underline">
-                Settings
-              </a>
+            <nav className="flex items-center gap-4">
+              <Link href="/dashboard" className="hover:underline">
+                {t("dashboard")}
+              </Link>
+              <Link href="/dashboard/projects" className="hover:underline">
+                {t("projects")}
+              </Link>
+              <Link href="/dashboard/team" className="hover:underline">
+                {t("team")}
+              </Link>
+              <Link href="/dashboard/settings" className="hover:underline">
+                {t("settings")}
+              </Link>
+              <NotificationCenter />
+              <LanguageSwitcher />
             </nav>
           </div>
         </div>

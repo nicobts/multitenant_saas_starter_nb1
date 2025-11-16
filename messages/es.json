@@ -1,0 +1,73 @@
+{
+  "common": {
+    "welcome": "Bienvenido",
+    "logout": "Cerrar sesión",
+    "login": "Iniciar sesión",
+    "signup": "Registrarse",
+    "email": "Correo electrónico",
+    "password": "Contraseña",
+    "name": "Nombre",
+    "save": "Guardar",
+    "cancel": "Cancelar",
+    "delete": "Eliminar",
+    "edit": "Editar",
+    "create": "Crear",
+    "search": "Buscar",
+    "loading": "Cargando...",
+    "error": "Error",
+    "success": "Éxito"
+  },
+  "nav": {
+    "dashboard": "Panel de control",
+    "projects": "Proyectos",
+    "settings": "Configuración",
+    "team": "Equipo",
+    "billing": "Facturación"
+  },
+  "dashboard": {
+    "title": "Panel de control",
+    "description": "Gestiona tu espacio de trabajo y proyectos"
+  },
+  "projects": {
+    "title": "Proyectos",
+    "description": "Ver y gestionar tus proyectos",
+    "create": "Crear Proyecto",
+    "noProjects": "Aún no hay proyectos",
+    "createFirst": "Crea tu primer proyecto para comenzar"
+  },
+  "team": {
+    "title": "Miembros del Equipo",
+    "description": "Gestiona los miembros de tu equipo e invitaciones",
+    "invite": "Invitar Miembro",
+    "role": "Rol",
+    "owner": "Propietario",
+    "admin": "Administrador",
+    "member": "Miembro"
+  },
+  "billing": {
+    "title": "Facturación",
+    "description": "Gestiona tu suscripción y facturación",
+    "plan": "Plan",
+    "free": "Gratuito",
+    "starter": "Inicial",
+    "pro": "Pro",
+    "enterprise": "Empresarial",
+    "upgrade": "Actualizar Plan",
+    "manageSubscription": "Gestionar Suscripción"
+  },
+  "auth": {
+    "signIn": "Inicia sesión en tu cuenta",
+    "signUp": "Crea una nueva cuenta",
+    "forgotPassword": "¿Olvidaste tu contraseña?",
+    "resetPassword": "Restablecer contraseña",
+    "verifyEmail": "Verifica tu correo electrónico",
+    "emailSent": "Revisa tu correo electrónico",
+    "emailNotVerified": "Por favor verifica tu dirección de correo electrónico"
+  },
+  "errors": {
+    "unauthorized": "No estás autorizado para realizar esta acción",
+    "notFound": "El recurso solicitado no fue encontrado",
+    "serverError": "Ocurrió un error inesperado",
+    "validationError": "Por favor verifica tu entrada e intenta nuevamente"
+  }
+}
