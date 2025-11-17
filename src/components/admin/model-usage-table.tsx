@@ -27,7 +27,7 @@ export function ModelUsageTable({ data, className }: ModelUsageTableProps) {
     <Card className={className}>
       <CardHeader>
         <CardTitle className="flex items-center gap-2">
-          <Cpu className="h-5 w-5" />
+          <Cpu className="size-5" />
           Usage by Model
         </CardTitle>
         <CardDescription>
@@ -53,7 +53,7 @@ export function ModelUsageTable({ data, className }: ModelUsageTableProps) {
                   const costPercentage = totalCost > 0
                     ? (item.totalCost / totalCost) * 100
                     : 0;
-                  const requestPercentage = totalRequests > 0
+                  const _requestPercentage = totalRequests > 0
                     ? (item.totalRequests / totalRequests) * 100
                     : 0;
 

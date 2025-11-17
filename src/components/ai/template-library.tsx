@@ -6,7 +6,7 @@ import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Separator } from "@/components/ui/separator";
-import { BookOpen, Search, Star, TrendingUp } from "lucide-react";
+import { BookOpen, Search, TrendingUp } from "lucide-react";
 import React, { useState } from "react";
 
 interface Template {
@@ -70,7 +70,7 @@ export function TemplateLibrary({
         <div className="flex items-center justify-between">
           <div>
             <CardTitle className="flex items-center gap-2">
-              <BookOpen className="h-5 w-5" />
+              <BookOpen className="size-5" />
               Template Library
             </CardTitle>
             <CardDescription>
@@ -87,7 +87,7 @@ export function TemplateLibrary({
       <CardContent className="space-y-4">
         {/* Search */}
         <div className="relative">
-          <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
+          <Search className="absolute left-3 top-1/2 size-4 -translate-y-1/2 text-muted-foreground" />
           <Input
             placeholder="Search templates..."
             value={searchQuery}

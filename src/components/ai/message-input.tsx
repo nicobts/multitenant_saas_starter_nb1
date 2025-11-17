@@ -52,7 +52,7 @@ export function MessageInput({
         size="icon"
         className="h-[60px] w-12 shrink-0"
       >
-        <Send className="h-4 w-4" />
+        <Send className="size-4" />
       </Button>
     </div>
   );

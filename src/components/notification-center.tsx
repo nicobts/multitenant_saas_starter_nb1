@@ -65,11 +65,11 @@ export function NotificationCenter({ className }: NotificationCenterProps) {
     <Popover open={open} onOpenChange={setOpen}>
       <PopoverTrigger asChild>
         <Button variant="outline" size="icon" className={cn("relative", className)}>
-          <Bell className="h-5 w-5" />
+          <Bell className="size-5" />
           {unreadCount > 0 && (
             <Badge
               variant="destructive"
-              className="absolute -top-1 -right-1 h-5 w-5 rounded-full p-0 flex items-center justify-center text-xs"
+              className="absolute -top-1 -right-1 size-5 rounded-full p-0 flex items-center justify-center text-xs"
             >
               {unreadCount > 99 ? "99+" : unreadCount}
             </Badge>
@@ -87,13 +87,13 @@ export function NotificationCenter({ className }: NotificationCenterProps) {
                 onClick={handleMarkAllAsRead}
                 disabled={markAllAsReadMutation.isPending}
               >
-                <Check className="h-4 w-4 mr-1" />
+                <Check className="size-4 mr-1" />
                 Mark all read
               </Button>
             )}
             <Link href="/dashboard/settings/notifications">
               <Button variant="ghost" size="icon">
-                <Settings className="h-4 w-4" />
+                <Settings className="size-4" />
               </Button>
             </Link>
           </div>
@@ -102,7 +102,7 @@ export function NotificationCenter({ className }: NotificationCenterProps) {
         <div className="max-h-[400px] overflow-y-auto">
           {notifications.length === 0 ? (
             <div className="p-8 text-center text-sm text-muted-foreground">
-              <Bell className="h-12 w-12 mx-auto mb-2 opacity-50" />
+              <Bell className="size-12 mx-auto mb-2 opacity-50" />
               <p>No notifications yet</p>
             </div>
           ) : (
@@ -120,7 +120,7 @@ export function NotificationCenter({ className }: NotificationCenterProps) {
                       <div className="flex items-center gap-2">
                         <p className="font-medium text-sm">{notification.title}</p>
                         {!notification.read && (
-                          <div className="h-2 w-2 rounded-full bg-blue-500" />
+                          <div className="size-2 rounded-full bg-blue-500" />
                         )}
                       </div>
                       <p className="text-sm text-muted-foreground">
@@ -146,21 +146,21 @@ export function NotificationCenter({ className }: NotificationCenterProps) {
                         <Button
                           variant="ghost"
                           size="icon"
-                          className="h-8 w-8"
+                          className="size-8"
                           onClick={() => handleMarkAsRead(notification.id)}
                           disabled={markAsReadMutation.isPending}
                         >
-                          <Check className="h-4 w-4" />
+                          <Check className="size-4" />
                         </Button>
                       )}
                       <Button
                         variant="ghost"
                         size="icon"
-                        className="h-8 w-8"
+                        className="size-8"
                         onClick={() => handleDelete(notification.id)}
                         disabled={deleteMutation.isPending}
                       >
-                        <Trash2 className="h-4 w-4" />
+                        <Trash2 className="size-4" />
                       </Button>
                     </div>
                   </div>

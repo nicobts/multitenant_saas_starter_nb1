@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { orpcClient } from "@/lib/orpc/client";
 import {
   MetricCard,
@@ -19,35 +19,35 @@ import {
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 export default function AIAnalyticsPage() {
-  const [timeRange, setTimeRange] = useState(30); // days
+  const [timeRange, _setTimeRange] = useState(30); // days
 
   // Fetch overview stats
-  const { data: overview, isLoading: overviewLoading } = orpcClient.aiAnalytics.getOverview.useQuery();
+  const { data: overview, isLoading: _overviewLoading } = orpcClient.aiAnalytics.getOverview.useQuery();
 
   // Fetch revenue trends
-  const { data: revenueTrends, isLoading: revenueLoading } = orpcClient.aiAnalytics.getRevenueTrends.useQuery({
+  const { data: revenueTrends, isLoading: _revenueLoading } = orpcClient.aiAnalytics.getRevenueTrends.useQuery({
     days: timeRange,
   });
 
   // Fetch usage by model
-  const { data: modelUsage, isLoading: modelUsageLoading } = orpcClient.aiAnalytics.getUsageByModel.useQuery({});
+  const { data: modelUsage, isLoading: _modelUsageLoading } = orpcClient.aiAnalytics.getUsageByModel.useQuery({});
 
   // Fetch top tenants
-  const { data: topTenants, isLoading: tenantsLoading } = orpcClient.aiAnalytics.getTopTenants.useQuery({
+  const { data: topTenants, isLoading: _tenantsLoading } = orpcClient.aiAnalytics.getTopTenants.useQuery({
     limit: 10,
     sortBy: "cost",
   });
 
   // Fetch model popularity
-  const { data: modelPopularity, isLoading: popularityLoading } = orpcClient.aiAnalytics.getModelPopularity.useQuery();
+  const { data: modelPopularity, isLoading: _popularityLoading } = orpcClient.aiAnalytics.getModelPopularity.useQuery();
 
   // Fetch recent activity
-  const { data: recentActivity, isLoading: activityLoading } = orpcClient.aiAnalytics.getRecentActivity.useQuery({
+  const { data: recentActivity, isLoading: _activityLoading } = orpcClient.aiAnalytics.getRecentActivity.useQuery({
     limit: 20,
   });
 
   // Fetch system health
-  const { data: systemHealth, isLoading: healthLoading } = orpcClient.aiAnalytics.getSystemHealth.useQuery();
+  const { data: systemHealth, isLoading: _healthLoading } = orpcClient.aiAnalytics.getSystemHealth.useQuery();
 
   return (
     <div className="space-y-8">
@@ -134,7 +134,7 @@ export default function AIAnalyticsPage() {
               <div className="space-y-4">
                 <h3 className="text-lg font-semibold">Model Popularity</h3>
                 <div className="grid gap-3">
-                  {modelPopularity.slice(0, 5).map((model, index) => (
+                  {modelPopularity.slice(0, 5).map((model: any, index: number) => (
                     <div
                       key={index}
                       className="flex items-center justify-between rounded-lg border p-4"

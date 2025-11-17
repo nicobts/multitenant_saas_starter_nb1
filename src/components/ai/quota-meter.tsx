@@ -22,7 +22,7 @@ export function QuotaMeter({ used, limit, className }: QuotaMeterProps) {
     <Card className={cn(className)}>
       <CardHeader>
         <CardTitle className="flex items-center gap-2">
-          <TrendingUp className="h-4 w-4" />
+          <TrendingUp className="size-4" />
           Monthly AI Quota
         </CardTitle>
       </CardHeader>
@@ -62,11 +62,11 @@ export function QuotaMeter({ used, limit, className }: QuotaMeterProps) {
           )}
         >
           {isExceeded ? (
-            <AlertCircle className="h-5 w-5 text-destructive shrink-0 mt-0.5" />
+            <AlertCircle className="size-5 text-destructive shrink-0 mt-0.5" />
           ) : isNearLimit ? (
-            <AlertCircle className="h-5 w-5 text-yellow-600 shrink-0 mt-0.5" />
+            <AlertCircle className="size-5 text-yellow-600 shrink-0 mt-0.5" />
           ) : (
-            <CheckCircle className="h-5 w-5 text-green-600 shrink-0 mt-0.5" />
+            <CheckCircle className="size-5 text-green-600 shrink-0 mt-0.5" />
           )}
           <div className="flex-1 space-y-1">
             <p className="text-sm font-medium">

@@ -36,7 +36,7 @@ export function TransactionHistory({
     <Card className={className}>
       <CardHeader>
         <CardTitle className="flex items-center gap-2">
-          <History className="h-5 w-5" />
+          <History className="size-5" />
           Transaction History
         </CardTitle>
         <CardDescription>
@@ -81,16 +81,16 @@ function TransactionItem({ transaction }: TransactionItemProps) {
       {/* Icon */}
       <div
         className={cn(
-          "flex h-10 w-10 shrink-0 items-center justify-center rounded-full",
+          "flex size-10 shrink-0 items-center justify-center rounded-full",
           isPositive
             ? "bg-green-100 text-green-600 dark:bg-green-950 dark:text-green-400"
             : "bg-red-100 text-red-600 dark:bg-red-950 dark:text-red-400"
         )}
       >
         {isPositive ? (
-          <ArrowUpRight className="h-5 w-5" />
+          <ArrowUpRight className="size-5" />
         ) : (
-          <ArrowDownRight className="h-5 w-5" />
+          <ArrowDownRight className="size-5" />
         )}
       </div>
 

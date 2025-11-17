@@ -86,7 +86,7 @@ export function ImageUpload({
             onClick={handleClick}
             className="w-full"
           >
-            <Upload className="mr-2 h-4 w-4" />
+            <Upload className="mr-2 size-4" />
             Upload Image{maxImages > 1 && "s"} ({images.length}/{maxImages})
           </Button>
         </div>
@@ -108,7 +108,7 @@ export function ImageUpload({
               <Button
                 variant="destructive"
                 size="icon"
-                className="absolute top-2 right-2 h-6 w-6 opacity-0 group-hover:opacity-100 transition-opacity"
+                className="absolute top-2 right-2 size-6 opacity-0 group-hover:opacity-100 transition-opacity"
                 onClick={() => handleRemove(index)}
               >
                 <X className="h-3 w-3" />
@@ -121,7 +121,7 @@ export function ImageUpload({
       {/* Help Text */}
       {images.length === 0 && (
         <div className="text-center py-6 border-2 border-dashed rounded-lg">
-          <ImageIcon className="mx-auto h-8 w-8 text-muted-foreground mb-2" />
+          <ImageIcon className="mx-auto size-8 text-muted-foreground mb-2" />
           <p className="text-sm text-muted-foreground">
             Upload images to use with vision models
           </p>

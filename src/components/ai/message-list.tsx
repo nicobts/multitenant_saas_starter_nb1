@@ -62,8 +62,8 @@ export function MessageList({
             ))}
             {isLoading && (
               <div className="flex gap-3 px-4 py-6 bg-muted/50">
-                <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-md border bg-background shadow">
-                  <Loader2 className="h-4 w-4 animate-spin" />
+                <div className="flex size-8 shrink-0 items-center justify-center rounded-md border bg-background shadow">
+                  <Loader2 className="size-4 animate-spin" />
                 </div>
                 <div className="flex-1">
                   <p className="text-sm text-muted-foreground">

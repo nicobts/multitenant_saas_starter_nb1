@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
 import { orpc } from "@/lib/orpc/client";
-import { Search, Eye, Edit } from "lucide-react";
+import { Search, Eye } from "lucide-react";
 import { formatDistanceToNow } from "date-fns";
 import Link from "next/link";
 
@@ -35,7 +35,7 @@ export default function AdminTenantsPage() {
       {/* Search */}
       <div className="flex items-center gap-4">
         <div className="relative flex-1 max-w-sm">
-          <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
+          <Search className="absolute left-3 top-1/2 -translate-y-1/2 size-4 text-muted-foreground" />
           <Input
             placeholder="Search tenants..."
             value={search}
@@ -81,7 +81,7 @@ export default function AdminTenantsPage() {
                   <div className="flex gap-2">
                     <Link href={`/admin/tenants/${item.tenant.id}`}>
                       <Button variant="outline" size="sm">
-                        <Eye className="h-4 w-4 mr-1" />
+                        <Eye className="size-4 mr-1" />
                         View
                       </Button>
                     </Link>

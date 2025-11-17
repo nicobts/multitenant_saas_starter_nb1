@@ -40,7 +40,7 @@ export function ConversationSidebar({
           <h2 className="text-lg font-semibold">Conversations</h2>
         </div>
         <Button onClick={onNewConversation} className="w-full" size="sm">
-          <Plus className="mr-2 h-4 w-4" />
+          <Plus className="mr-2 size-4" />
           New Chat
         </Button>
       </div>
@@ -102,7 +102,7 @@ function ConversationItem({
       onMouseEnter={() => setShowDelete(true)}
       onMouseLeave={() => setShowDelete(false)}
     >
-      <MessageSquare className="h-4 w-4 shrink-0" />
+      <MessageSquare className="size-4 shrink-0" />
       <div className="flex-1 min-w-0">
         <p className="text-sm font-medium truncate">{conversation.title}</p>
         <div className="flex items-center gap-2 text-xs text-muted-foreground">
@@ -117,7 +117,7 @@ function ConversationItem({
         <Button
           variant="ghost"
           size="icon"
-          className="h-6 w-6 shrink-0 opacity-0 group-hover:opacity-100 transition-opacity"
+          className="size-6 shrink-0 opacity-0 group-hover:opacity-100 transition-opacity"
           onClick={(e) => {
             e.stopPropagation();
             onDelete();

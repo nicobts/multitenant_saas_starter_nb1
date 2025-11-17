@@ -80,7 +80,7 @@ export function TemplateForm({
         <div className="flex items-start justify-between">
           <div>
             <CardTitle className="flex items-center gap-2">
-              <Wand2 className="h-5 w-5" />
+              <Wand2 className="size-5" />
               {template.name}
             </CardTitle>
             {template.description && (
@@ -91,7 +91,7 @@ export function TemplateForm({
           </div>
           {onCancel && (
             <Button variant="ghost" size="icon" onClick={onCancel}>
-              <X className="h-4 w-4" />
+              <X className="size-4" />
             </Button>
           )}
         </div>
@@ -196,7 +196,7 @@ export function TemplateForm({
               </Button>
             )}
             <Button type="submit">
-              <Wand2 className="mr-2 h-4 w-4" />
+              <Wand2 className="mr-2 size-4" />
               Use Template
             </Button>
           </div>

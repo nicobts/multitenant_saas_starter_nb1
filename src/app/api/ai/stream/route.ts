@@ -65,7 +65,7 @@ export async function POST(request: NextRequest) {
     }
 
     // Save user message
-    const [userMessage] = await db
+    const [_userMessage] = await db
       .insert(aiMessages)
       .values({
         conversationId,

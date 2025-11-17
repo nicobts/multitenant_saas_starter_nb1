@@ -39,7 +39,7 @@ export function ChatMessage({
             : "bg-background text-foreground"
         )}
       >
-        {isUser ? <User className="h-4 w-4" /> : <Bot className="h-4 w-4" />}
+        {isUser ? <User className="size-4" /> : <Bot className="size-4" />}
       </div>
 
       {/* Content */}

@@ -9,11 +9,13 @@ const handler = new RPCHandler({
 async function handleRequest(request: Request) {
   const context = await createContext(request);
 
-  return await handler.handle({
+  const result = await handler.handle({
     request,
     prefix: "/api",
     context,
   });
+
+  return result.response;
 }
 
 export { handleRequest as GET, handleRequest as POST };

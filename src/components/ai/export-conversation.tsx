@@ -155,21 +155,21 @@ export function ExportConversation({
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <Button variant="outline" size="sm" className={className}>
-          <Download className="mr-2 h-4 w-4" />
+          <Download className="mr-2 size-4" />
           Export
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
         <DropdownMenuItem onClick={exportToMarkdown}>
-          <FileText className="mr-2 h-4 w-4" />
+          <FileText className="mr-2 size-4" />
           Export as Markdown
         </DropdownMenuItem>
         <DropdownMenuItem onClick={exportToText}>
-          <FileText className="mr-2 h-4 w-4" />
+          <FileText className="mr-2 size-4" />
           Export as Text
         </DropdownMenuItem>
         <DropdownMenuItem onClick={exportToJSON}>
-          <FileText className="mr-2 h-4 w-4" />
+          <FileText className="mr-2 size-4" />
           Export as JSON
         </DropdownMenuItem>
       </DropdownMenuContent>

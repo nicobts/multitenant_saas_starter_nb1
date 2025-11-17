@@ -56,7 +56,7 @@ export default function AIPage() {
 
   // Create conversation mutation
   const createConversation = orpc.ai.conversations.create.useMutation({
-    onSuccess: (data) => {
+    onSuccess: (data: any) => {
       setCurrentConversationId(data.id);
       setSelectedModel(data.modelId);
       refetchConversations();
@@ -67,7 +67,7 @@ export default function AIPage() {
         description: "Your new conversation is ready.",
       });
     },
-    onError: (error) => {
+    onError: (error: any) => {
       toast({
         title: "Error",
         description: error.message,
@@ -82,7 +82,7 @@ export default function AIPage() {
       refetchMessages();
       refetchConversations();
     },
-    onError: (error) => {
+    onError: (error: any) => {
       toast({
         title: "Error sending message",
         description: error.message,
@@ -102,7 +102,7 @@ export default function AIPage() {
         title: "Conversation deleted",
       });
     },
-    onError: (error) => {
+    onError: (error: any) => {
       toast({
         title: "Error",
         description: error.message,
@@ -159,7 +159,7 @@ export default function AIPage() {
         <Dialog open={newConversationOpen} onOpenChange={setNewConversationOpen}>
           <DialogTrigger asChild>
             <Button>
-              <PlusCircle className="mr-2 h-4 w-4" />
+              <PlusCircle className="mr-2 size-4" />
               New Conversation
             </Button>
           </DialogTrigger>
@@ -189,7 +189,7 @@ export default function AIPage() {
                   onChange={(e) => setSelectedModel(e.target.value)}
                 >
                   <option value="">Select a model...</option>
-                  {models.map((model) => (
+                  {models.map((model: any) => (
                     <option key={model.modelId} value={model.modelId}>
                       {model.name} ({model.provider})
                     </option>
@@ -233,7 +233,7 @@ export default function AIPage() {
           {currentConversationId && currentConversation ? (
             <ChatInterface
               messages={
-                currentConversation.messages.map((msg) => ({
+                currentConversation.messages.map((msg: any) => ({
                   ...msg,
                   createdAt: new Date(msg.createdAt),
                 })) || []
@@ -253,7 +253,7 @@ export default function AIPage() {
                   Select a conversation from the sidebar or create a new one
                 </p>
                 <Button onClick={() => setNewConversationOpen(true)}>
-                  <PlusCircle className="mr-2 h-4 w-4" />
+                  <PlusCircle className="mr-2 size-4" />
                   Create Conversation
                 </Button>
               </div>
