@@ -1,7 +1,7 @@
 import { pgTable, text, timestamp, uuid, varchar, boolean } from "drizzle-orm/pg-core";
 import { relations } from "drizzle-orm";
 import { createInsertSchema, createSelectSchema } from "drizzle-zod";
-import { tenants } from "./tenants";
+import {  } from "./";
 import { tenantMembers } from "./tenant-members";
 
 export const users = pgTable("users", {

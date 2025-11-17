@@ -26,10 +26,10 @@ export function InvitationEmail({
   return (
     <Html>
       <Head />
-      <Preview>You've been invited to join {tenantName}</Preview>
+      <Preview>You&apos;ve been invited to join {tenantName}</Preview>
       <Body style={main}>
         <Container style={container}>
-          <Heading style={h1}>You're invited!</Heading>
+          <Heading style={h1}>You&apos;re invited!</Heading>
           <Text style={text}>
             {inviterName} has invited you to join <strong>{tenantName}</strong> as a{" "}
             <strong>{role}</strong>.

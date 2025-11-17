@@ -9,3 +9,6 @@ export const client = createORPCClient<AppRouter>({
 });
 
 export const orpcClient = createRouterUtils(client);
+
+// Backward compatibility alias
+export const orpc = orpcClient;

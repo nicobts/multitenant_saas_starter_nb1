@@ -1,4 +1,4 @@
-import { or, ORPCError } from "@orpc/server";
+import { ORPCError } from "@orpc/server";
 import { z } from "zod";
 import { protectedProcedure, tenantProcedure } from "../init";
 import { eq, and, desc, sql } from "drizzle-orm";
@@ -302,7 +302,7 @@ export const billingRouter = {
         })
       )
       .handler(async ({ input, context }) => {
-        const { db, tenant } = context;
+        const { db, tenant: _tenant } = context;
 
         // Get package
         const pkg = await db.query.aiCreditPackages.findFirst({

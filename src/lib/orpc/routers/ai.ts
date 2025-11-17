@@ -1,4 +1,4 @@
-import { or, ORPCError } from "@orpc/server";
+import { ORPCError } from "@orpc/server";
 import { z } from "zod";
 import { protectedProcedure, tenantProcedure } from "../init";
 import { eq, and, desc, sql } from "drizzle-orm";
@@ -7,7 +7,7 @@ import {
   aiMessages,
   aiModels,
   aiPromptTemplates,
-  aiUsageStats,
+  
 } from "@/db/schema";
 import {
   getOpenRouterClient,

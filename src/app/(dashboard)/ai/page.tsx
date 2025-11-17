@@ -16,7 +16,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { orpc } from "@/lib/orpc/client";
-import { PlusCircle, Settings } from "lucide-react";
+import { PlusCircle } from "lucide-react";
 import React, { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 

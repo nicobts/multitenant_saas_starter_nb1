@@ -1,4 +1,4 @@
-import { or, ORPCError } from "@orpc/server";
+import { ORPCError } from "@orpc/server";
 import { z } from "zod";
 import { protectedProcedure } from "../init";
 import { eq, and, desc, sql, gte, lte } from "drizzle-orm";
@@ -13,7 +13,7 @@ import {
 } from "@/db/schema";
 
 // Super admin middleware
-const superAdminProcedure = protectedProcedure.use(async (input, context, meta) => {
+const superAdminProcedure = protectedProcedure.use(async ({ context, next }) => {
   const { db, user } = context;
 
   // Check if user is super admin
@@ -28,7 +28,7 @@ const superAdminProcedure = protectedProcedure.use(async (input, context, meta) 
     });
   }
 
-  return { adminRole };
+  return next({ context: { ...context, adminRole } });
 });
 
 export const adminRouter = {
